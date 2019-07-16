@@ -1,0 +1,47 @@
+[alias]
+    ad = add
+    aa = add .
+    adp = add -p
+    b = branch
+    ba = branch -a
+    co = checkout
+    cob = checkout -b
+    cof = checkout -f
+    c = commit
+    cm = commit -m
+    amend = commit --amend
+    f = fetch
+    rb = rebase
+    rbi = rebase -i
+    rs = reset
+    rsoft = reset --soft
+    rhard = reset --hard
+    conf = config
+    confg = config --global
+    confl = config --global --list
+    l = log
+    lo = log --oneline
+    los = log --stat
+    di = diff
+    dw = diff -w
+    da = diff .
+    diffst = diff --staged
+    d1 = diff HEAD^
+    dname = diff --name-only
+	st = status
+    puH = push -u origin HEAD
+
+[fetch]
+    prune = true
+
+[pull]
+    ff = only
+
+[merge]
+    ff = false
+
+[push]
+    default = current
+[user]
+	name = msawady
+	email = masaaki2110@gmail.com
