@@ -1,0 +1,10 @@
+#! /bin/bash
+
+dot_path=$1
+
+echo $dot_path
+
+ln -s ${dot_path}/.vimrc ~/.vimrc
+ln -s ${dot_path}/.bashrc ~/.bashrc
+ln -s ${dot_path}/.bash_profile ~/.bash_profile
+ln -s ${dot_path}/.gitconfig ~/.gitconfig
