@@ -8,6 +8,7 @@ alias pip='pip3'
 
 
 
-alias gbr='git remote -v | awk "{print \$2}" | uniq | sed -e "s_:_/_" | sed -e "s_git@_https://_" | xargs open'
+alias gbr='git remote -v | awk "{print \$2}" | uniq | sed -e "s_ssh://git@_https://_" | xargs open'
+#alias gbr='git remote -v | awk "{print \$2}" | uniq | sed -e "s_:_/_" | sed -e "s_git@_https://_" | xargs open'
 alias b='git branch -a | peco'
 alias g='cd $(ghq root)/$(ghq list | peco)'
