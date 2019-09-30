@@ -4,6 +4,9 @@
     adp = add -p
     b = branch
     ba = branch -a
+    bd = branch -d
+    bD = branch -D
+    bm = branch -m
     co = checkout
     cob = checkout -b
     cof = checkout -f
@@ -12,7 +15,7 @@
     amend = commit --amend
     f = fetch
     rb = rebase
-    rbi = rebase -i
+    rbi = rebase -i --autostash
     rs = reset
     rsoft = reset --soft
     rhard = reset --hard
@@ -24,12 +27,22 @@
     los = log --stat
     di = diff
     dw = diff -w
+    dn = diff --name-only
     da = diff .
+	dst = diff --staged
     diffst = diff --staged
     d1 = diff HEAD^
     dname = diff --name-only
 	st = status
-    puH = push -u origin HEAD
+    s = switch
+    sc = switch -c
+    r = restore
+    p = pull
+    pr = pull --rebase
+    puh = push -u origin HEAD
+	cg = config --global
+	rv = remote -v
+	cl = config --global --list
 
 [fetch]
     prune = true
