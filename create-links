@@ -4,8 +4,8 @@ dot_path=$1
 
 echo $dot_path
 
-ln -s ${dot_path}/.vimrc ~/.vimrc
-ln -s ${dot_path}/.bashrc ~/.bashrc
-ln -s ${dot_path}/.bash_aliases ~/.bash_aliases
-ln -s ${dot_path}/.gitconfig ~/.gitconfig
-ln -s ${dot_path}/.ideavimrc ~/.ideavimrc
+ln -sf ${dot_path}/.vimrc ~/.vimrc
+ln -sf ${dot_path}/.bashrc ~/.bashrc
+ln -sf ${dot_path}/.bash_aliases ~/.bash_aliases
+ln -sf ${dot_path}/.gitconfig ~/.gitconfig
+ln -sf ${dot_path}/.ideavimrc ~/.ideavimrc
