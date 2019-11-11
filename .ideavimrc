@@ -1,1 +1,26 @@
+" enable surround.vim 
 set surround
+
+" use IDEA search
+nnoremap / :<C-u>action Find<CR>
+
+" use IDEA next/previous
+nnoremap <C-o> :<C-u>action Back<CR>
+nnoremap <C-i> :<C-u>action Forward<CR>
+nnoremap <C-S-o> <C-o>
+nnoremap <C-S-i> <C-i>
+
+" jamp to next/previous method
+nnoremap [m :<C-u>action MethodUp<CR>
+nnoremap ]m :<C-u>action MethodDown<CR>
+
+" jamp to next/previous change
+nnoremap [c :<C-u>action VcsShowPrevChangeMarker<CR>
+nnoremap ]c :<C-u>action VcsShowNextChangeMarker<CR>
+
+" jamp to next/previous error
+nnoremap [e :<C-u>action GotoPreviousError<CR>
+nnoremap ]e :<C-u>action GotoNextError<CR>
+
+" show match brace
+set showmatch matchtime=1
