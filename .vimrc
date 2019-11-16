@@ -10,6 +10,12 @@ Plugin 'tpope/vim-surround'
 call vundle#end()
 filetype plugin indent on
 
+" md as markdown, instead of modula2
+autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
+" Disable highlight italic in Markdown
+autocmd FileType markdown hi! def link markdownItalic LineNr
+
+
 set fenc=utf-8
 set nobackup
 set noswapfile
@@ -19,8 +25,8 @@ set smartindent
 set showmatch
 
 set expandtab
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 
 set ignorecase
 set smartcase
