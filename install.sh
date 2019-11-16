@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
 brew install git
 brew install ghq
 brew install peco
@@ -17,6 +19,7 @@ sdk install gradle
 sdk install scala
 sdk install sbt
 
-brew install python
+echo 'export SBT_OPTS="-Xmx2G -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=2G -Duser.timezone=UTC"' >> ~/.bash_profile
 
+brew install python3
 
