@@ -7,6 +7,8 @@ echo $dot_path
 ln -sf ${dot_path}/.vimrc ~/.vimrc
 ln -sf ${dot_path}/.bashrc ~/.bashrc
 ln -sf ${dot_path}/.bash_aliases ~/.bash_aliases
+ln -sf ${dot_path}/.zshrc ~/.zshrc
+ln -sf ${dot_path}/.zsh_aliases ~/.zsh_aliases
 ln -sf ${dot_path}/.gitconfig ~/.gitconfig
 ln -sf ${dot_path}/.ideavimrc ~/.ideavimrc
 ln -sf ${dot_path}/.sbtrc ~/.sbtrc

@@ -38,8 +38,10 @@ set smartcase
 set incsearch
 set wrapscan
 set hlsearch
-set clipboard+=autoselect
 nnoremap <ESC><ESC> :nohl<CR>
+set clipboard+=autoselect
+set backspace=indent,eol,start
+
 
 
 
