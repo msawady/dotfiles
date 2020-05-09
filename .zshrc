@@ -39,6 +39,19 @@ rbenv() {
   esac
 }
 
+# zsh prompt
+source "/usr/local/opt/zsh-git-prompt/zshrc.sh"
+ZSH_THEME_GIT_PROMPT_PREFIX="["
+ZSH_THEME_GIT_PROMPT_SUFFIX=" ]"
+ZSH_THEME_GIT_PROMPT_BRANCH="%{$fg[white]%}"
+ZSH_THEME_GIT_PROMPT_STAGED="%{$fg[green]%}%{ %G%}"
+ZSH_THEME_GIT_PROMPT_CONFLICTS="%{$fg[magenta]%}%{x%G%}"
+ZSH_THEME_GIT_PROMPT_CHANGED="%{$fg[red]%}%{+%G%}"
+ZSH_THEME_GIT_PROMPT_BEHIND="%{$fg[red]%}%{-%G%}"
+ZSH_THEME_GIT_PROMPT_AHEAD="%{$fg[green]%}%{+%G%}"
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%}%{✔%G%}"
+RPROMPT='$(git_super_status)'
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

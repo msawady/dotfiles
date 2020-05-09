@@ -6,6 +6,7 @@ brew install git
 brew install ghq
 brew install peco
 brew install jq
+brew install zsh-git-prompt
 
 brew install nodebrew 
 echo 'export PATH=$HOME/.nodebrew/current/bin:$PATH' >> ~/.bash_profile
