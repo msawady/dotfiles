@@ -16,6 +16,9 @@ export PS1='\[\033[37m\][\[\033[36m\]\u\[\033[37m\]@\h \[\033[32m\]\W\[\033[37m\
 # sbt
 export SBT_OPTS="-Xmx8G -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -Xss128M  -Duser.timezone=JST"
 
+# golang
+export GOPATH="$HOME/go/"
+
 eval export PATH="$HOME/.rbenv/shims:${PATH}"
 export RBENV_SHELL=bash
 source "/usr/local/Cellar/rbenv/1.1.2/libexec/../completions/rbenv.bash"

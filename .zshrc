@@ -42,6 +42,9 @@ PROMPT='[%~:%n] %# '
 # sbt
 export SBT_OPTS="-Xmx8G -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -Xss128M  -Duser.timezone=JST"
 
+# golang
+export GOPATH="$HOME/go/"
+
 eval export PATH="$HOME/.rbenv/shims:${PATH}"
 export RBENV_SHELL=bash
 
