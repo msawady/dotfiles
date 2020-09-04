@@ -17,6 +17,9 @@ autoload -U colors
 colors
 zstyle ':completion:*' list-colors "${LS_COLORS}"
  
+# enable del key
+bindkey "^[[3~" delete-char
+
 # 単語の入力途中でもTab補完を有効化
 setopt complete_in_word
 # 補完候補をハイライト

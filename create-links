@@ -1,6 +1,6 @@
 #! /bin/bash
 
-dot_path=$1
+dot_path=$(PWD)
 
 echo $dot_path
 
