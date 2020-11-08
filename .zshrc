@@ -39,7 +39,6 @@ SPROMPT="correct: $RED%R$DEFAULT -> $GREEN%r$DEFAULT ? [Yes/No/Abort/Edit] => "
 #source /usr/local/etc/zsh_completion.d/git-prompt.sh
 #source /usr/local/etc/zsh_completion.d/git-completion.zsh
 GIT_PS1_SHOWDIRTYSTATE=true
-PROMPT='[%~:%n] %# '
 
 
 # sbt
@@ -79,6 +78,47 @@ ZSH_THEME_GIT_PROMPT_BEHIND="%{$fg[red]%}%{-%G%}"
 ZSH_THEME_GIT_PROMPT_AHEAD="%{$fg[green]%}%{+%G%}"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%}%{✔%G%}"
 RPROMPT='$(git_super_status)'
+
+# use vi mode
+bindkey -v
+
+# show vim mode(INS/NOR) in prompt
+function zle-keymap-select zle-line-init
+{
+    case $KEYMAP in
+        main|viins)
+            VI_MODE="$fg[cyan]INS$reset_color"
+            ;;
+        vicmd)
+            VI_MODE="$fg[white]NOR$reset_color"
+            ;;
+    esac
+
+    PROMPT="[%1d : $VI_MODE] %  "
+    zle reset-prompt
+}
+
+zle -N zle-line-init
+zle -N zle-keymap-select
+
+# emacs like insert mode
+bindkey -M viins '\er' history-incremental-pattern-search-forward
+bindkey -M viins '^?'  backward-delete-char
+bindkey -M viins '^A'  beginning-of-line
+bindkey -M viins '^B'  backward-char
+bindkey -M viins '^D'  delete-char-or-list
+bindkey -M viins '^E'  end-of-line
+bindkey -M viins '^F'  forward-char
+bindkey -M viins '^G'  send-break
+bindkey -M viins '^H'  backward-delete-char
+bindkey -M viins '^K'  kill-line
+bindkey -M viins '^N'  down-line-or-history
+bindkey -M viins '^P'  up-line-or-history
+bindkey -M viins '^R'  history-incremental-pattern-search-backward
+bindkey -M viins '^U'  backward-kill-line
+bindkey -M viins '^W'  backward-kill-word
+bindkey -M viins '^Y'  yank
+
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
