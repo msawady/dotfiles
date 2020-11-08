@@ -90,7 +90,7 @@ function zle-keymap-select zle-line-init
             VI_MODE="%{$fg[cyan]%}INS%{$reset_color%}"
             ;;
         vicmd)
-            VI_MODE="%{$fg[white]%}NOR%{$reset_color%}"
+            VI_MODE="%{$fg[magenta]%}NOR%{$reset_color%}"
             ;;
     esac
 
