@@ -1,5 +1,4 @@
 alias ll='ls -lah'
-alias ls='ls -G'
 alias cdw='cd $HOME/workspaces'
 alias cdt='cd $HOME/tools'
 alias python='python3'
@@ -7,6 +6,10 @@ alias pip='pip3'
 alias g='git'
 
 
+alias ls='exa'
+alias fp='fd | peco'
+alias cat='bat'
+alias rb2c='perl -pe "s/\n/,/g"'
 
 alias gg='cd $(ghq root)/$(ghq list | peco)'
 alias b='git branch | peco | xargs git switch'
