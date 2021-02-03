@@ -7,4 +7,4 @@ alias tc=test:compile
 alias to=testOnly
 alias tq=testQuick
 alias bin=universal:packageBin
-alias fmt=;scalafmt;test:scalafmt;sbt:scalafmt
+alias fmt=;scalafmt;test:scalafmt;scalafmtSbt
